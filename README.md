@@ -1,26 +1,25 @@
 AWS Project Setup Guide
-Explore the essential steps required to set up an AWS project, covering IAM role creation, Lambda function configuration, DynamoDB table establishment, and API Gateway setup.
+Learn how to set up your AWS project with ease. This guide walks you through the essential steps, including IAM role creation, Lambda function setup, DynamoDB table creation, and API Gateway configuration.
 
-Step 1: IAM Role Creation
-Begin by creating an IAM role in the AWS Management Console. Assign the necessary permissions to the role, ensuring access to the required AWS services for your project.
-
-Role Permissions
-To enable Lambda functions and DynamoDB access in this project, create an IAM role with the following permissions:
-
+IAM Role Creation
+1. Create IAM Roles: Begin by creating IAM roles in the AWS Management Console.
+2. Assign Permissions: Assign the necessary permissions to the roles, ensuring access to AWS services required for your project.
 AWSLambdaBasicExecutionRole: Provides basic execution permissions for Lambda functions.
 AWSDynamoDBFullAccess: Grants full access permissions to DynamoDB tables.
-Ensure these roles are assigned to Lambda functions and any other resources needing DynamoDB access.
-
-Step 2: Lambda Function Setup
-Create a Lambda function using the AWS Lambda service. Configure the function according to project requirements, including triggers, environment variables, and function code. Select the latest version of Python as the runtime and assign an appropriate execution role. After creating the function, upload the zip file containing your code.
-
-Step 3: DynamoDB Table Creation
-Create a DynamoDB table in the AWS DynamoDB service. Name the table as specified in your Python code and choose "email" as the partition key. Select default settings for other configurations and create the table to complete the setup.
-
-Step 4: API Gateway Configuration
-Set up an API Gateway in the AWS API Gateway service. Define API endpoints, methods, and integrations with Lambda functions or other AWS services.
-
+Lambda Function Setup
+Create Lambda Function: Use the AWS Lambda service to create a new Lambda function.
+Configuration: Configure the function according to your project's needs, including triggers, environment variables, and function code.
+Choose the latest version of Python as the runtime.
+Assign an appropriate execution role.
+DynamoDB Table Creation
+Create DynamoDB Table: Head to the AWS DynamoDB service to create a new table.
+Configuration: Name the table as specified in your Python code and choose "email" as the partition key.
+Select default settings for other configurations.
+API Gateway Configuration
+Set Up API Gateway: Configure an API Gateway in the AWS API Gateway service.
+Define Endpoints: Define API endpoints, methods, and integrations with Lambda functions or other AWS services.
 Create a REST API with both GET and POST methods.
-Deploy the API to the "dev" stage and copy the invoke URL provided. Users can submit data via the API, which will be stored in the DynamoDB table.
+Deploy the API to the "dev" stage and copy the provided invoke URL.
 Example Usage
-Users can access the provided API Gateway link to access the login page. After login, users can submit data via the UI, which will be stored in DynamoDB for storage and retrieval.
+Access the provided API Gateway link to access the login page. After logging in, users can submit data via the UI, which will be stored in DynamoDB for storage and retrieval.
+
