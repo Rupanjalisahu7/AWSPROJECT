@@ -6,6 +6,7 @@ Create IAM Roles: Begin by creating IAM roles in the AWS Management Console.
 Assign Permissions: Assign the necessary permissions to the roles, ensuring access to AWS services required for your project.
    
 1.AWSLambdaBasicExecutionRole: Provides basic execution permissions for Lambda functions.
+
 2.AWSDynamoDBFullAccess: Grants full access permissions to DynamoDB tables.
 
 # Lambda Function Setup
@@ -25,6 +26,6 @@ Define Endpoints: Define API endpoints, methods, and integrations with Lambda fu
 Create a REST API with both GET and POST methods.
 Deploy the API to the "dev" stage and copy the provided invoke URL.
 
-# Example Usage
+Example Usage
 Access the provided API Gateway link to access the login page. After logging in, users can submit data via the UI, which will be stored in DynamoDB for storage and retrieval.
 
